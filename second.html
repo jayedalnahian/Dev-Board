@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        exports = {
+            content: ['./src/**/*.{html,js}'],
+            theme: {
+                extend: {
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'], // Add Poppins here
+                    },
+                },
+            },
+            plugins: [],
+        };
+    </script>
+</head>
+
+<body id="body">
+    <header>
+        <nav class="navbar bg-base-100 flex justify-around w-10/12 mx-auto mt-2 rounded-xl shadow-xl">
+            <div class="">
+                <img src="assets/logo.png" alt="">
+                <a class="btn btn-ghost text-3xl">Dev<span class="font-bold">Board</span></a>
+            </div>
+            <button id="backDashboard" class="btn text-xl font-bold bg-blue-600 text-white">Back to Desk</button>
+        </nav>
+    </header>
+    <main class="w-10/12 mx-auto flex flex-col gap-10 text-2xl font-bold">
+        <p class="text-center text-4xl">Blogs</p>
+
+        <div>
+
+            <p>Question-1: What are the different ways to select an element in the DOM?</p>
+            <p class="text-xl font-normal text-gray-600">There are many ways to select an element in the DOM. Like
+                document.getElementById(), document.getElementByClassNames(), document.getElementByTagName(),
+                document.querySelector(), document.querySelectorAll(). Also we can use parentElement, childElement,
+                previousElementSibling, nextElementSibling etc.</p>
+        </div>
+
+        <div>
+            <p>Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+            <p class="text-xl font-normal text-gray-600">innerHTML returns all HTML content like tags and text contents.
+                innerText returns visible text of a HTML element that is selected, it can not return hidden texts.
+                textContent can return all text content inside a HTML element including hidden texts.</p>
+        </div>
+
+        <div>
+            <p>Question-3: What is event delegation in the DOM?</p>
+            <p class="text-xl font-normal text-gray-600">Event delegation is a way to handle events thru parent element,
+                rather than attaching event listeners to individual child elements. Event delegation can make our code
+                well
+                decorated and easy to code.</p>
+        </div>
+
+        <div>
+            <p>Question-4: What is event bubbling in the DOM?</p>
+            <p class="text-xl font-normal text-gray-600">Event bubbling is a system of DOM, if an event triggered on a
+                child
+                element, it propagates up through its parent element. If an event occurs like click on an element, the
+                event
+                would also trigger on all of its parent elements. So the feature of moving through the higher elements
+                is
+                called Bubbling.</p>
+        </div>
+
+        <div>
+            <p>Question-5: How do you create, add, and remove elements using JavaScript?</p>
+            <p class="text-xl font-normal text-gray-600">To create elements I use document.createElement()
+                and to add element to the DOM I use appendChild(), append() etc.
+                While removing elements from the DOM use removeChild(), remove().</p>
+        </div>
+
+    </main>
+    <script>
+        document.getElementById("backDashboard").addEventListener("click", function () {
+            window.location.href = "index.html"
+        })
+    </script>
+</body>
+
+</html>
