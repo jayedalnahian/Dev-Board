@@ -33,6 +33,11 @@ for (let button of completedBtn) {
             document.getElementById("doneProjects").innerText = doneProjects
         }
 
+        if(taskAssigned === 0){
+            alert("Congrates!!! You have completed all the current tasks.")
+        }
+        
+
         let history = document.createElement("p");
         history.innerText = `
         You have Complete The ${button.parentElement.previousElementSibling.previousElementSibling.innerText} at ${time()}
